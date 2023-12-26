@@ -75,7 +75,7 @@
 					},
 					"ifTrueActivities": [
 						{
-							"name": "Population data_copy1",
+							"name": "Copy population data",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
