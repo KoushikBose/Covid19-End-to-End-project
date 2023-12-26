@@ -13,6 +13,9 @@
 		},
 		"ls_adls_covigreportingdl_properties_typeProperties_url": {
 			"value": "https://covidreportingdatagen2.dfs.core.windows.net/"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/efd8a452-9f43-4397-b1da-33fc0ad14ecc/resourceGroups/Covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingblobsg"
 		}
 	}
 }
