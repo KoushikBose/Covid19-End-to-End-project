@@ -68,7 +68,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"fileName": "tps00010.tsv",
+						"fileName": "Population_by_age.csv",
 						"container": "population"
 					},
 					"columnDelimiter": ",",
