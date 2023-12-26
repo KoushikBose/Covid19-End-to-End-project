@@ -301,7 +301,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "population_byage.csv",
+						"fileName": "population_by_age.csv",
 						"folderPath": "population",
 						"fileSystem": "raw"
 					},
