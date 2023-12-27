@@ -15,12 +15,12 @@
 				},
 				"userProperties": [
 					{
-						"name": "Source",
+						"name": "sourceRelativeURL",
 						"value": "covid19/nationalcasedeath/csv"
 					},
 					{
-						"name": "Destination",
-						"value": "raw/ecdc/cases_deaths.csv"
+						"name": "sinkFileName",
+						"value": "hospital_admissions.csv"
 					}
 				],
 				"typeProperties": {
