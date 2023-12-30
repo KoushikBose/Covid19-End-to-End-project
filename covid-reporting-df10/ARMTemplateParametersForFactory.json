@@ -17,6 +17,12 @@
 		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
 			"value": "https://opendata.ecdc.europa.eu"
 		},
+		"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
+			"value": "covid19/hospitalicuadmissionrates/csv/data.csv"
+		},
+		"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sinkFileName": {
+			"value": "hospital_admission.csv"
+		},
 		"trigger1_properties_typeProperties_scope": {
 			"value": "/subscriptions/efd8a452-9f43-4397-b1da-33fc0ad14ecc/resourceGroups/Covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingblobsg"
 		}
