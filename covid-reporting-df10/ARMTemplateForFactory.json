@@ -33,7 +33,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/pl_ingest_case_deaths_data')]",
+			"name": "[concat(parameters('factoryName'), '/pl_ingest_ecdc_data')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -97,7 +97,7 @@
 								"type": "DatasetReference",
 								"parameters": {
 									"relativeURL": {
-										"value": "@variables('sourceRelativeURL')",
+										"value": "@pipeline().parameters.sourceRelativeURL",
 										"type": "Expression"
 									}
 								}
@@ -109,7 +109,7 @@
 								"type": "DatasetReference",
 								"parameters": {
 									"filename": {
-										"value": "@variables('sinkFileName')",
+										"value": "@pipeline().parameters.sinkFileName",
 										"type": "Expression"
 									}
 								}
@@ -120,14 +120,12 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"variables": {
+				"parameters": {
 					"sourceRelativeURL": {
-						"type": "String",
-						"defaultValue": "covid19/hospitalicuadmissionrates/csv/data.csv"
+						"type": "string"
 					},
 					"sinkFileName": {
-						"type": "String",
-						"defaultValue": "hospital_admission.csv"
+						"type": "string"
 					}
 				},
 				"annotations": []
@@ -624,6 +622,26 @@
 					"url": "[parameters('ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url')]",
 					"enableServerCertificateValidation": true,
 					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/tr_ingest_hospital_admission_data')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Day",
+						"interval": 1,
+						"startTime": "2023-12-30T12:43:00",
+						"timeZone": "India Standard Time"
+					}
 				}
 			},
 			"dependsOn": []
