@@ -36,47 +36,23 @@
 		},
 		"schema": [
 			{
-				"name": "country",
+				"name": "Country",
 				"type": "String"
 			},
 			{
-				"name": "country_code",
+				"name": "Response_measure",
 				"type": "String"
 			},
 			{
-				"name": "continent",
+				"name": "change",
 				"type": "String"
 			},
 			{
-				"name": "population",
+				"name": "date_start",
 				"type": "String"
 			},
 			{
-				"name": "indicator",
-				"type": "String"
-			},
-			{
-				"name": "weekly_count",
-				"type": "String"
-			},
-			{
-				"name": "year_week",
-				"type": "String"
-			},
-			{
-				"name": "rate_14_day",
-				"type": "String"
-			},
-			{
-				"name": "cumulative_count",
-				"type": "String"
-			},
-			{
-				"name": "source",
-				"type": "String"
-			},
-			{
-				"name": "note",
+				"name": "date_end",
 				"type": "String"
 			}
 		]
