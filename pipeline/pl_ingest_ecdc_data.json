@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy case and death data",
+				"name": "Copy cases and death cases",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -13,16 +13,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [
-					{
-						"name": "Source",
-						"value": "@{'<relativeURL>'}"
-					},
-					{
-						"name": "Destination",
-						"value": "raw/ecdc/@{'<filename>'}"
-					}
-				],
+				"userProperties": [],
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
@@ -48,92 +39,6 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "country",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "country",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "indicator",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "indicator",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "date",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "date",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "year_week",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "year_week",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "value",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "value",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "source",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "source",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "url",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "url",
-									"type": "String",
-									"physicalType": "String"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
