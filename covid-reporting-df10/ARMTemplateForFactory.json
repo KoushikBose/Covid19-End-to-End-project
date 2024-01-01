@@ -21,7 +21,7 @@
 		},
 		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "@{linkedService().sourceBaseURL}"
+			"defaultValue": "https://opendata.ecdc.europa.eu"
 		},
 		"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
 			"type": "string",
@@ -83,6 +83,68 @@
 							"enableStaging": false,
 							"translator": {
 								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "Country",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Country",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Response_measure",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Response_measure",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "change",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "change",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "date_start",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "date_start",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "date_end",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "date_end",
+											"type": "String",
+											"physicalType": "String"
+										}
+									}
+								],
 								"typeConversion": true,
 								"typeConversionSettings": {
 									"allowDataTruncation": true,
@@ -405,12 +467,7 @@
 				"linkedServiceName": {
 					"referenceName": "ls_http_opendata_ecdc_europa_eu",
 					"type": "LinkedServiceReference",
-					"parameters": {
-						"sourceBaseURL": {
-							"value": "@dataset().baseURL",
-							"type": "Expression"
-						}
-					}
+					"parameters": {}
 				},
 				"parameters": {
 					"relativeURL": {
@@ -640,11 +697,6 @@
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"parameters": {
-					"sourceBaseURL": {
-						"type": "string"
-					}
-				},
 				"annotations": [],
 				"type": "HttpServer",
 				"typeProperties": {
